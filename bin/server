@@ -1,0 +1,12 @@
+'use strict';
+require('newrelic');
+// Load appjs
+var server = require('../app.js');
+
+// Load configuration
+var config = require("../config");
+
+// Start the server
+server.listen(config.port, function() {
+  console.log("🌐  server listening on port " + config.port);
+});
